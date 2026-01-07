@@ -1,0 +1,3 @@
+interface NotificationSeenStatusUpdateRequest {
+  notificationId: string;
+}

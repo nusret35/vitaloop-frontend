@@ -1,0 +1,3 @@
+interface AiMessage {
+  message: string;
+}

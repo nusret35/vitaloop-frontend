@@ -1,0 +1,3 @@
+interface CheckUsernameForNewAccountRequest {
+  username: string;
+}

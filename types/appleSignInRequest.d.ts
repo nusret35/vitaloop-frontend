@@ -1,0 +1,3 @@
+interface AppleSignInRequest {
+  id: string;
+}

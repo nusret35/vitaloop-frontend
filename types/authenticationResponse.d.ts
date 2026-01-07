@@ -1,0 +1,3 @@
+interface AuthenticationResponse {
+  token: string;
+}

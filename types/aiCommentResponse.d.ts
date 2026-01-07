@@ -1,0 +1,3 @@
+interface AiCommentResponse {
+  aiCommentResponse: string;
+}

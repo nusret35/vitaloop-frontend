@@ -1,0 +1,3 @@
+interface DeleteUserAddictionRequest {
+  addictionId: string;
+}

@@ -1,0 +1,3 @@
+interface DeleteUserRoutineRequest {
+  id: string;
+}

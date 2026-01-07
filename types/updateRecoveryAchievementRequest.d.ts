@@ -1,0 +1,3 @@
+interface UpdateRecoveryAchievementRequest {
+  addictionId: id;
+}

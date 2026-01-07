@@ -1,0 +1,3 @@
+interface ResetAddictionTimerRequest {
+  addictionId: string;
+}
