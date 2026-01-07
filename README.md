@@ -111,6 +111,7 @@ Firebase Cloud Messaging is integrated for iOS and Android push notifications.
 
 **Required Configuration:**
 - `google-services.json` file is required for Android builds and Firebase integration
+- `GoogleService-Info.plist` file is required for iOS builds and Firebase integration
 
 ## 📱 Platform Support
 
