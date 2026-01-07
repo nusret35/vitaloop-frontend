@@ -44,3 +44,5 @@ recoverai-933d6-firebase-adminsdk-fbsvc-38e6af8495.json
 *.ipa
 
 .env
+
+google-services.json

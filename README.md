@@ -109,6 +109,9 @@ The app is configured with the `vitaloop://` URL scheme for deep linking and OAu
 ### Push Notifications
 Firebase Cloud Messaging is integrated for iOS and Android push notifications.
 
+**Required Configuration:**
+- `google-services.json` file is required for Android builds and Firebase integration
+
 ## 📱 Platform Support
 
 - **iOS**: Supports iPhone (portrait only), includes Apple Sign-In integration
