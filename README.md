@@ -1,50 +1,161 @@
-# Welcome to your Expo app 👋
+# Vitaloop - Recovery & Wellness App 🌱
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Vitaloop is a comprehensive React Native mobile application designed to support users in their recovery journey from addictions and help build healthy habits. The app features AI-powered chat assistance, progress tracking, goal setting, and community support.
 
-## Get started
+## 🚀 Quick Start
 
-1. Install dependencies
+### Prerequisites
+- Node.js 18+ and npm
+- Expo CLI (`npm install -g @expo/cli`)
+- iOS Simulator (macOS) or Android Studio (for Android development)
 
+### Installation
+
+1. Clone the repository and install dependencies:
    ```bash
+   git clone <repository-url>
+   cd recoverAiFrontend
    npm install
    ```
 
-2. Start the app
+2. Set up environment variables:
+   - Configure `EXPO_PUBLIC_API_URL` for your backend API
+   - Set up `EXPO_PUBLIC_GOOGLE_LOGIN_URL` for Google OAuth
 
+3. Start the development server:
    ```bash
-    npx expo start
+   npm start
    ```
 
-In the output, you'll find options to open the app in a
+### Development Commands
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+**Core Commands:**
+- `npm start` - Start Expo development server
+- `npm run ios` - Run on iOS simulator
+- `npm run android` - Run on Android emulator
+- `npm run test` - Run Jest tests in watch mode
+- `npm run lint` - Run ESLint
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+**Build Commands:**
+- `eas build --platform ios --profile development` - Development iOS build
+- `eas build --platform android --profile development` - Development Android build
+- `eas build --platform all --profile production` - Production builds
 
-## Get a fresh project
+## 🏗️ Architecture
 
-When you're ready, run:
+### Tech Stack
+- **Framework**: React Native with Expo SDK 52
+- **Language**: TypeScript
+- **State Management**: Redux Toolkit with RTK Query
+- **Navigation**: Expo Router (file-based routing)
+- **Forms**: Formik + Yup validation
+- **Authentication**: Multi-provider (Email, Apple Sign-In, Google OAuth)
+- **Internationalization**: React i18next (English/Turkish)
 
-```bash
-npm run reset-project
+### Key Features
+- **AI Assistant "Vita"**: Chat-based support system
+- **Addiction Tracking**: Monitor recovery progress and milestones
+- **Goal Management**: Set and track personal wellness goals
+- **Daily Check-ins**: Mood and feeling tracking
+- **Achievement System**: Celebrate recovery milestones
+- **Routine Builder**: Create healthy daily routines
+- **Push Notifications**: Reminders and encouragement
+- **Secure Authentication**: JWT tokens with biometric support
+
+### Project Structure
+```
+app/
+├── (app)/                 # Protected app routes
+│   ├── (drawer)/         # Drawer navigation
+│   │   └── (tabs)/       # Tab navigation (Home, Journey)
+│   ├── chat/             # AI assistant chat screens
+│   ├── addiction/        # Addiction tracking & management
+│   ├── goal/             # Goal setting & tracking
+│   └── profile/          # User profile & settings
+├── create-account/       # Account creation flow
+├── sign-in.tsx          # Authentication screen
+└── _layout.tsx          # Root layout with providers
+
+components/
+├── chat/                 # AI chat components
+├── journey/              # Progress tracking UI
+└── themed/               # Themed UI components
+
+redux/
+├── slices/               # Feature-based Redux slices
+└── store.ts              # Redux store configuration
+
+services/                 # API services with RTK Query
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🔐 Authentication Flow
 
-## Learn more
+The app supports multiple authentication methods:
+- Email/password authentication
+- Apple Sign-In (iOS only)
+- Google OAuth with deep linking
 
-To learn more about developing your project with Expo, look at the following resources:
+JWT tokens are securely stored using Expo Secure Store with biometric protection when available.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 🔧 Configuration
 
-## Join the community
+### Environment Variables
+- `EXPO_PUBLIC_API_URL`: Backend API endpoint (default: `https://api.vitaloop.app`)
+- `EXPO_PUBLIC_GOOGLE_LOGIN_URL`: Google OAuth redirect URL
 
-Join our community of developers creating universal apps.
+### Deep Linking
+The app is configured with the `vitaloop://` URL scheme for deep linking and OAuth callbacks.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### Push Notifications
+Firebase Cloud Messaging is integrated for iOS and Android push notifications.
+
+## 📱 Platform Support
+
+- **iOS**: Supports iPhone (portrait only), includes Apple Sign-In integration
+- **Android**: Full Android support with adaptive icons
+- **Required Permissions**:
+  - Microphone access (for voice features)
+  - Push notifications
+  - Biometric authentication (Face ID/Touch ID)
+
+## 🧪 Testing
+
+The project uses Jest with the `jest-expo` preset:
+```bash
+npm run test
+```
+
+## 🚀 Deployment
+
+### Development Builds
+```bash
+# iOS development build
+eas build --platform ios --profile development
+
+# Android development build
+eas build --platform android --profile development
+```
+
+### Production Builds
+```bash
+# Build for both platforms
+eas build --platform all --profile production
+```
+
+## 🤝 Contributing
+
+1. Follow the existing code style and conventions
+2. Use the established patterns for navigation, state management, and API calls
+3. Add appropriate TypeScript types
+4. Test on both iOS and Android platforms
+5. Run linting before committing: `npm run lint`
+
+## 📄 License
+
+This project is private and proprietary.
+
+---
+
+**App Store**: com.nusret35.recoverai
+**Version**: 1.0.4
+**Minimum Requirements**: iOS 13+, Android API 21+
