@@ -156,6 +156,17 @@ This project is private and proprietary.
 
 ---
 
+## App Screens
+
+<img width="1206" height="2622" alt="Simulator Screenshot - iPhone 16 Pro - 2025-07-27 at 16 36 17" src="https://github.com/user-attachments/assets/7d996375-5203-46d3-ae1b-4468166883c0" />
+
+<img width="1179" height="2556" alt="Simulator Screenshot - iPhone 16 - 2025-09-30 at 20 46 19" src="https://github.com/user-attachments/assets/91293c83-6544-4926-83d9-a85055f8486e" />
+
+<img width="1179" height="2556" alt="Simulator Screenshot - iPhone 16 - 2025-08-08 at 00 56 32" src="https://github.com/user-attachments/assets/fb5a2e93-d71d-40eb-aa31-7ed94e9f295f" />
+
+
+
+
 **App Store**: com.nusret35.recoverai
 **Version**: 1.0.4
 **Minimum Requirements**: iOS 13+, Android API 21+
